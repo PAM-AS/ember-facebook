@@ -10,6 +10,7 @@
     appId: undefined
     facebookParams: Ember.Object.create()
     fetchPicture: true
+    locale: "en_US"
 
     init: ->
       @_super()
@@ -20,14 +21,14 @@
       @removeObserver('appId')
       window.fbAsyncInit = => @fbAsyncInit()
 
-      $ ->
+      $ =>
         $('body').append($("<div>").attr('id', 'fb-root'))
         js = document.createElement 'script'
 
         $(js).attr
           id: 'facebook-jssdk'
           async: true
-          src: "//connect.facebook.net/en_US/all.js"
+          src: "//connect.facebook.net/#{@get 'locale'}/all.js"
 
         $('head').append js
     ).observes('facebookParams', 'appId')
