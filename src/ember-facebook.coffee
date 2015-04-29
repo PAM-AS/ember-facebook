@@ -41,6 +41,7 @@
         cookie: facebookParams.get('cookie') || true
         xfbml: facebookParams.get('xfbml') || true
         channelUrl: facebookParams.get('channelUrl') || undefined
+        version: facebookParams.get('version') || 'v2.3'
 
       FB.init facebookParams
 
