@@ -28,7 +28,7 @@
         $(js).attr
           id: 'facebook-jssdk'
           async: true
-          src: "//connect.facebook.net/#{@get 'locale'}/all.js"
+          src: "//connect.facebook.net/#{@get 'locale'}/sdk.js"
 
         $('head').append js
     ).observes('facebookParams', 'appId')
