@@ -10,7 +10,7 @@
     appId: undefined
     facebookParams: Ember.Object.create()
     fetchPicture: true
-    locale: "en_US"
+    locale: 'en_US'
 
     init: ->
       @_super()
